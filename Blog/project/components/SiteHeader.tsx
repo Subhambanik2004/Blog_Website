@@ -70,13 +70,13 @@ export function SiteHeader({ user }: { user: User | null }) {
             <>
               <Link
                 href="/login"
-                className="rounded-lg px-3 py-2 text-sm font-medium text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-900"
+                className="rounded-lg px-3 py-2 text-xl font-medium text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-900"
               >
                 Log in
               </Link>
               <Link
                 href="/signup"
-                className="rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-zinc-800"
+                className="rounded-full bg-zinc-900 px-4 py-2 text-xl font-semibold text-white shadow-sm transition hover:bg-zinc-800"
               >
                 Sign up
               </Link>
