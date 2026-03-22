@@ -18,7 +18,7 @@ interface ViewCounterProps {
   skipViewIncrement?: boolean;
 }
 
-const POLL_MS = 15_000;
+const POLL_MS = 5000;
 
 function sessionKeyFor(blogId: string) {
   return `blog_view_tracked_${blogId}`;
