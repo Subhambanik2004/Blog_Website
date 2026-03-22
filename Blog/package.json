@@ -1,0 +1,10 @@
+{
+  "name": "blog",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix project",
+    "build": "npm run build --prefix project",
+    "start": "npm run start --prefix project",
+    "lint": "npm run lint --prefix project"
+  }
+}

@@ -23,7 +23,7 @@ export default async function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-full transform rotate-12 scale-y-50"></div>
               </div>
               <h1 className="relative text-4xl md:text-5xl font-serif font-bold text-center mb-4 text-slate-900 dark:text-slate-100">
-                Fashion Blog
+                 Blog
               </h1>
               <p className="relative text-center text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto text-lg">
                 No posts available at the moment. Check back soon!
@@ -42,11 +42,11 @@ export default async function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-full transform rotate-12 scale-y-50"></div>
             </div>
             <h1 className="relative text-4xl md:text-5xl font-serif font-bold text-center mb-4 text-slate-900 dark:text-slate-100">
-              Fasion Blog
+               Blog
             </h1>
-            <p className="relative text-center text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto text-lg">
+            {/* <p className="relative text-center text-slate-600 dark:text-slate-400 mb-12 max-w-2xl mx-auto text-lg">
               "Unleash your style with the latest trends, timeless classics, and bold fashion statements!" ✨👗
-            </p>
+            </p> */}
           </div>
           <BlogList posts={posts} />
         </div>

@@ -26,21 +26,26 @@ export function CreatePost() {
         finalContent = finalContent.replace('(uploading...)', `(${url})`);
       });
 
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+      if (!user) {
+        toast.error('You must be signed in to create a post');
+        return false;
+      }
+
       // Generate slug from title by converting to lowercase and replacing spaces with dashes
       const slug = formData.title.toLowerCase().replace(/ /g, '-');
 
-      const { error } = await supabase
-        .from('blog_posts')
-        .insert([
-          {
-            title: formData.title,
-            excerpt: formData.excerpt,
-            content: finalContent,
-            image_url: featuredImageUrl,
-            content_images: contentImageUrls,
-            slug, // Include slug in the insert
-          },
-        ]);
+      const { error } = await supabase.rpc('insert_blog_post', {
+        p_slug: slug,
+        p_title: formData.title,
+        p_excerpt: formData.excerpt,
+        p_content: finalContent,
+        p_content_images: contentImageUrls,
+        p_image_url: featuredImageUrl,
+        p_published: true,
+      });
 
       if (error) throw error;
 

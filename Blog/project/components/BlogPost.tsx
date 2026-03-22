@@ -12,6 +12,8 @@ import ViewCounter from './ViewCounter';
 
 interface BlogPostProps {
   post: BlogPost;
+  /** When true, opening this page does not count as a view (viewer is the author). */
+  skipViewIncrement?: boolean;
 }
 
 function ContentWithImages({ content }: { content: string }) {
@@ -45,7 +47,7 @@ function ContentWithImages({ content }: { content: string }) {
   );
 }
 
-export default function BlogPost({ post }: BlogPostProps) {
+export default function BlogPost({ post, skipViewIncrement = false }: BlogPostProps) {
   const [copied, setCopied] = useState(false);
   const currentUrl = typeof window !== 'undefined' ? window.location.href : '';
 
@@ -109,7 +111,12 @@ export default function BlogPost({ post }: BlogPostProps) {
               <span>{Math.ceil(post.content.split(' ').length / 200)} min read</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <ViewCounter blogId={post.id} initialViews={post.views} />
+              <ViewCounter
+                blogId={post.id}
+                initialViews={post.views}
+                authorId={post.author_id}
+                skipViewIncrement={skipViewIncrement}
+              />
             </div>
           </div>
 
@@ -123,13 +130,19 @@ export default function BlogPost({ post }: BlogPostProps) {
         <div className="border-t border-gray-300 opacity-50"></div>
       </div>
 
-      <div className="relative rounded-xl overflow-hidden mb-12 h-80">
-        <Image
-          src={post.image_url}
-          alt={post.title}
-          fill
-          className="object-cover"
-        />
+      <div className="relative rounded-xl overflow-hidden mb-12 h-80 bg-slate-200">
+        {post.image_url ? (
+          <Image
+            src={post.image_url}
+            alt={post.title}
+            fill
+            className="object-cover"
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center text-slate-500">
+            No cover image
+          </div>
+        )}
       </div>
 
       <div className="prose max-w-none text-gray-800">

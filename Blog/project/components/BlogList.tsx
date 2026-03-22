@@ -2,7 +2,7 @@
 
 import type { BlogPost } from '@/lib/blog-data';
 import { Card } from '@/components/ui/card';
-import { Calendar, Clock, Eye } from 'lucide-react';
+import { Calendar, Clock } from 'lucide-react';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -44,10 +44,12 @@ export default function BlogList({ posts }: BlogListProps) {
                   <Clock className="w-4 h-4" />
                   <span className="text-sm font-medium">{Math.ceil(post.content.split(' ').length / 200)} min read</span>
                 </div>
-                <div className="flex items-center gap-1.5">
-                  <Eye className="w-4 h-4 text-slate-500 dark:text-slate-400" />
-                  <span className="text-sm font-medium">{post.views} views</span>
-                </div>
+                <ViewCounter
+                  blogId={post.id}
+                  initialViews={post.views}
+                  trackView={false}
+                  authorId={post.author_id}
+                />
               </div>
               <h2 className="text-2xl font-serif font-semibold mb-4 text-slate-900 dark:text-slate-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                 {post.title}

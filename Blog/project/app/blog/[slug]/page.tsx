@@ -3,6 +3,7 @@ import { getBlogPosts } from '@/lib/blog-data';
 import BlogPost from '@/components/BlogPost';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import { createServerSupabaseClient } from '@/lib/supabase/server';
 
 // Revalidate every hour
 export const revalidate = 3600;
@@ -71,6 +72,13 @@ export default async function BlogPostPage({
       return notFound();
     }
 
+    const supabase = createServerSupabaseClient();
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    const skipViewIncrement =
+      !!user && !!post.author_id && user.id === post.author_id;
+
     return (
       <div className="relative">
         <Link
@@ -79,7 +87,7 @@ export default async function BlogPostPage({
         >
           <span className="text-black text-2xl">&larr;</span>
         </Link>
-        <BlogPost post={post} />
+        <BlogPost post={post} skipViewIncrement={skipViewIncrement} />
       </div>
     );
   } catch (error) {
