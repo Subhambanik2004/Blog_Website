@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { createServerSupabaseClient } from '@/lib/supabase/server';
 
 // Revalidate every hour
+export const dynamic = 'force-dynamic';
 export const revalidate = 3600;
 
 export async function generateStaticParams() {
