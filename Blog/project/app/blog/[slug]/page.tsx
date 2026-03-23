@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 
   // Use the same fallback mechanism for site URL
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001';
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
   const postUrl = `${siteUrl}/blog/${post.slug}`;
 
   return {
@@ -84,7 +84,7 @@ export default async function BlogPostPage({
       <div className="relative">
         <Link
           href="/"
-          className="absolute top-6 left-6 md:top-10 md:left-10 p-6 w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 shadow-lg shadow-blue-500/50 transition-all"
+          className="absolute top-3 left-3 md:top-10 md:left-10 p-6 w-10 h-10 flex items-center justify-center rounded-full bg-white hover:bg-gray-200 shadow-lg shadow-blue-500/50 transition-all"
         >
           <span className="text-black text-2xl">&larr;</span>
         </Link>
