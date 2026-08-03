@@ -27,7 +27,7 @@ export function SiteHeader({ user }: { user: User | null }) {
     null;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200/90 bg-stone-100 shadow-[0_1px_0_rgba(0,0,0,0.03)]">
+    <header className="sticky top-0 z-50 border-b-2 border-sky-400 bg-[#DFF4FF] shadow-lg shadow-sky-300/30">
       
       {/* MAIN HEADER */}
       <div className="mx-auto flex h-20 sm:h-24 max-w-[1280px] items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
