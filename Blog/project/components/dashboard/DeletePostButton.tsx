@@ -5,11 +5,9 @@ import { useRouter } from 'next/navigation';
 import { Trash2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { createBrowserSupabaseClient } from '@/lib/supabase/client';
-import { useGlobalLoadingOptional } from '@/components/providers/GlobalLoadingProvider';
 
 export function DeletePostButton({ postId }: { postId: string }) {
   const router = useRouter();
-  const globalLoad = useGlobalLoadingOptional();
   const [busy, setBusy] = useState(false);
 
   async function handleDelete() {
@@ -23,9 +21,7 @@ export function DeletePostButton({ postId }: { postId: string }) {
 
       if (error) throw error;
       toast.success('Post deleted');
-      globalLoad?.startLoading();
       router.refresh();
-      router.push('/dashboard/posts');
     } catch (e) {
       console.error(e);
       toast.error(e instanceof Error ? e.message : 'Could not delete post');
