@@ -100,7 +100,7 @@ export function BlogPostForm({
 
   const labelClass = 'mb-2 block text-sm font-medium text-zinc-700';
   const fieldClass =
-    'w-full rounded-xl border border-zinc-200 bg-white px-4 py-3 text-zinc-900 shadow-sm transition placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900/10';
+    'w-full rounded-xl border border-zinc-200 bg-stone-100 px-4 py-3 text-zinc-900 shadow-sm transition placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-900/10';
 
   return (
     <form onSubmit={handleFormSubmit} className="space-y-6" noValidate>
@@ -152,7 +152,7 @@ export function BlogPostForm({
           <button
             type="button"
             onClick={() => triggerFileInput('contentImage')}
-            className="absolute bottom-4 right-4 rounded-xl border border-zinc-200 bg-white p-2 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50"
+            className="absolute bottom-4 right-4 rounded-xl border border-zinc-200 bg-stone-100 p-2 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50"
             title="Insert image at cursor"
           >
             <Image className="h-5 w-5" />
@@ -220,7 +220,7 @@ export function BlogPostForm({
             onClick={() => {
               intentRef.current = 'save-published';
             }}
-            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-zinc-800 disabled:opacity-50 sm:flex-none"
+            className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-zinc-900 px-5 py-3 text-sm font-semibold text-stone-100 shadow-sm transition hover:bg-zinc-800 disabled:opacity-50 sm:flex-none"
           >
             <Send className="h-5 w-5" />
             {isSubmitting ? 'Saving…' : 'Save changes'}
@@ -233,7 +233,7 @@ export function BlogPostForm({
               onClick={() => {
                 intentRef.current = 'draft';
               }}
-              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-200 bg-white px-5 py-3 text-sm font-semibold text-zinc-800 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50 sm:flex-none"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full border border-zinc-200 bg-stone-100 px-5 py-3 text-sm font-semibold text-zinc-800 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50 sm:flex-none"
             >
               <FileDown className="h-5 w-5" />
               {isSubmitting ? 'Saving…' : 'Save draft'}
@@ -244,7 +244,7 @@ export function BlogPostForm({
               onClick={() => {
                 intentRef.current = 'publish';
               }}
-              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-zinc-900 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-zinc-800 disabled:opacity-50 sm:flex-none"
+              className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-zinc-900 px-5 py-3 text-sm font-semibold text-stone-100 shadow-sm transition hover:bg-zinc-800 disabled:opacity-50 sm:flex-none"
             >
               <Send className="h-5 w-5" />
               {isSubmitting ? 'Publishing…' : 'Publish'}

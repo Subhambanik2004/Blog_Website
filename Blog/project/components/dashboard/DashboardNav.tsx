@@ -46,7 +46,7 @@ export function DashboardNav() {
   return (
     <>
       <nav
-        className="sticky top-16 z-30 flex gap-2 overflow-x-auto border-b border-zinc-200/80 bg-white/90 px-4 py-3 backdrop-blur-md lg:hidden"
+        className="sticky top-16 z-30 flex gap-2 overflow-x-auto border-b border-zinc-200/80 bg-stone-100/90 px-4 py-3 backdrop-blur-md lg:hidden"
         aria-label="Dashboard"
       >
         {links.map(({ href, label, icon }) => (
@@ -62,7 +62,7 @@ export function DashboardNav() {
       </nav>
 
       <aside
-        className="hidden w-60 shrink-0 border-r border-zinc-200/80 bg-white lg:block"
+        className="hidden w-60 shrink-0 border-r border-zinc-200/80 bg-stone-100 lg:block"
         aria-label="Dashboard"
       >
         <div className="sticky top-16 space-y-1 py-8 pl-6 pr-4">

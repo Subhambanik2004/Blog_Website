@@ -121,12 +121,12 @@ export function GlobalLoadingProvider({ children }: { children: ReactNode }) {
       {children}
       {loading ? (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-white/55 backdrop-blur-md"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-stone-100/55 backdrop-blur-md"
           role="alert"
           aria-busy="true"
           aria-live="polite"
         >
-          <div className="flex flex-col items-center gap-4 rounded-2xl border border-zinc-200/90 bg-white px-10 py-8 shadow-xl">
+          <div className="flex flex-col items-center gap-4 rounded-2xl border border-zinc-200/90 bg-stone-100 px-10 py-8 shadow-xl">
             <Loader2 className="h-11 w-11 animate-spin text-zinc-800" strokeWidth={2} />
             <p className="text-sm font-medium tracking-wide text-zinc-600">Loading…</p>
           </div>

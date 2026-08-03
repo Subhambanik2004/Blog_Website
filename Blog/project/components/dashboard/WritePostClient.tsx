@@ -94,7 +94,7 @@ export function WritePostClient() {
         </p>
       </header>
 
-      <div className="max-w-3xl rounded-2xl border border-zinc-200/90 bg-white p-6 shadow-sm sm:p-8 lg:p-10">
+      <div className="max-w-3xl rounded-2xl border border-zinc-200/90 bg-stone-100 p-6 shadow-sm sm:p-8 lg:p-10">
         <BlogPostForm onSubmit={handleSubmit} isSubmitting={loading} />
       </div>
     </div>

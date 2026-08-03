@@ -42,7 +42,7 @@ export default async function MyPostsPage() {
         </div>
         <Link
           href="/dashboard/write"
-          className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-zinc-800"
+          className="inline-flex items-center justify-center gap-2 self-start rounded-full bg-zinc-900 px-5 py-2.5 text-sm font-semibold text-stone-100 shadow-sm transition hover:bg-zinc-800"
         >
           <Plus className="h-4 w-4" strokeWidth={2.25} />
           New post
@@ -51,7 +51,7 @@ export default async function MyPostsPage() {
 
       {!posts?.length ? (
         <div className="flex flex-col items-center justify-center rounded-2xl border border-dashed border-zinc-200 bg-zinc-50/50 px-8 py-20 text-center">
-          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-zinc-200 bg-white shadow-sm">
+          <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-zinc-200 bg-stone-100 shadow-sm">
             <FileText className="h-7 w-7 text-zinc-400" strokeWidth={1.5} />
           </div>
           <p className="text-base font-medium text-zinc-800">No posts yet</p>
@@ -60,7 +60,7 @@ export default async function MyPostsPage() {
           </p>
           <Link
             href="/dashboard/write"
-            className="mt-8 inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white px-5 py-2.5 text-sm font-semibold text-zinc-800 shadow-sm transition hover:border-zinc-400 hover:bg-zinc-50"
+            className="mt-8 inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-stone-100 px-5 py-2.5 text-sm font-semibold text-zinc-800 shadow-sm transition hover:border-zinc-400 hover:bg-zinc-50"
           >
             <Plus className="h-4 w-4" />
             Write your first post
@@ -71,7 +71,7 @@ export default async function MyPostsPage() {
           {posts.map((row) => (
             <li
               key={row.id}
-              className="group rounded-2xl border border-zinc-200/90 bg-white p-5 shadow-sm transition hover:border-zinc-300 hover:shadow-md sm:p-6"
+              className="group rounded-2xl border border-zinc-200/90 bg-stone-100 p-5 shadow-sm transition hover:border-zinc-300 hover:shadow-md sm:p-6"
             >
               <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
                 <div className="min-w-0 flex-1 space-y-2">
@@ -102,7 +102,7 @@ export default async function MyPostsPage() {
                 <div className="flex shrink-0 flex-wrap gap-2 sm:pt-1">
                   <Link
                     href={`/dashboard/edit/${row.id}`}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50"
+                    className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-stone-100 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50"
                   >
                     <Pencil className="h-3.5 w-3.5" strokeWidth={2} />
                     Edit
@@ -110,7 +110,7 @@ export default async function MyPostsPage() {
                   {row.published && (
                     <Link
                       href={`/blog/${row.slug}`}
-                      className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-stone-100 px-4 py-2 text-sm font-medium text-zinc-700 shadow-sm transition hover:border-zinc-300 hover:bg-zinc-50"
                     >
                       <ExternalLink className="h-3.5 w-3.5" strokeWidth={2} />
                       View

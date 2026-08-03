@@ -27,14 +27,14 @@ export function SiteHeader({ user }: { user: User | null }) {
     null;
 
   return (
-    <header className="sticky top-0 z-50 border-b border-zinc-200/90 bg-white shadow-[0_1px_0_rgba(0,0,0,0.03)]">
+    <header className="sticky top-0 z-50 border-b border-zinc-200/90 bg-stone-100 shadow-[0_1px_0_rgba(0,0,0,0.03)]">
       
       {/* MAIN HEADER */}
       <div className="mx-auto flex h-20 sm:h-24 max-w-[1280px] items-center justify-between gap-6 px-4 sm:px-6 lg:px-8">
         
         {/* LOGO */}
         <Link href="/" className="group flex items-center gap-2.5">
-          <span className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 text-lg sm:text-xl font-bold tracking-tight text-zinc-800 transition group-hover:border-zinc-300 group-hover:bg-white">
+          <span className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 text-lg sm:text-xl font-bold tracking-tight text-zinc-800 transition group-hover:border-zinc-300 group-hover:bg-stone-100">
             B
           </span>
           <span className="font-serif text-xl sm:text-2xl font-semibold tracking-tight text-zinc-1000">
@@ -102,7 +102,7 @@ export function SiteHeader({ user }: { user: User | null }) {
 
               <Link
                 href="/signup"
-                className="rounded-full bg-zinc-900 px-4 py-2 text-lg font-semibold text-white shadow-sm transition hover:bg-zinc-800"
+                className="rounded-full bg-zinc-900 px-4 py-2 text-lg font-semibold text-stone-100 shadow-sm transition hover:bg-zinc-800"
               >
                 Sign up
               </Link>
@@ -121,7 +121,7 @@ export function SiteHeader({ user }: { user: User | null }) {
 
       {/* MOBILE MENU */}
       {open && (
-        <div className="md:hidden border-t border-zinc-200 bg-white px-4 py-4 space-y-3">
+        <div className="md:hidden border-t border-zinc-200 bg-stone-100 px-4 py-4 space-y-3">
 
           <Link
             href="/"
@@ -178,7 +178,7 @@ export function SiteHeader({ user }: { user: User | null }) {
 
               <Link
                 href="/signup"
-                className="block rounded-full bg-zinc-900 px-4 py-2 text-base font-semibold text-white text-center"
+                className="block rounded-full bg-zinc-900 px-4 py-2 text-base font-semibold text-stone-100 text-center"
               >
                 Sign up
               </Link>

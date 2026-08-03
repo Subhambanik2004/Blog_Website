@@ -85,7 +85,7 @@ export default function BlogPost({ post, skipViewIncrement = false }: BlogPostPr
   }, [post.title, post.excerpt, postUrl]);
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12 bg-white">
+    <article className="max-w-4xl mx-auto px-4 py-12 bg-stone-100">
       <div className="relative">
         <div className="absolute inset-0 blur-3xl opacity-30">
           {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-full transform rotate-12 scale-y-50"></div> */}

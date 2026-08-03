@@ -75,7 +75,7 @@ export function GoogleOAuthButton({
     <Button
       type="button"
       variant="outline"
-      className="w-full gap-2 border-slate-300 bg-white text-slate-800 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
+      className="w-full gap-2 border-slate-300 bg-stone-100 text-slate-800 hover:bg-slate-50 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
       onClick={() => void handleGoogle()}
       disabled={loading}
     >

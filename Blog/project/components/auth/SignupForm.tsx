@@ -76,7 +76,7 @@ export function SignupForm() {
           <span className="w-full border-t border-slate-200 dark:border-slate-700" />
         </div>
         <div className="relative flex justify-center text-xs font-medium uppercase tracking-wide text-slate-500">
-          <span className="bg-white px-3 dark:bg-slate-950">Or</span>
+          <span className="bg-stone-100 px-3 dark:bg-slate-950">Or</span>
         </div>
       </div>
 

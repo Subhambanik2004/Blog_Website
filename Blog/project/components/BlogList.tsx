@@ -22,7 +22,7 @@ export default function BlogList({ posts }: BlogListProps) {
           target="_blank" 
           rel="noopener noreferrer"
         >
-          <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 h-full">
+          <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer bg-stone-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 h-full">
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={post.image_url}
